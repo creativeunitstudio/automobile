@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+	
+<div class="container">
+        <div class="shortcut-bar">
+	<a href="shop.html" class="shortcut-item" data-filter="all">
+        <img src="assets/img/shortcuts/0.png" alt="All">
+        <span>Shop</span>
+    </a>
+	<a href="shop.html?filter=car_tyres" class="shortcut-item" data-filter="tyres_wheels">
+        <img src="assets/img/shortcuts/1.png" alt="Burger">
+        <span>Tyres & Wheels</span>
+    </a>	
+     <a href="shop.html?filter=car_lights" class="shortcut-item" data-filter="Lights">
+        <img src="assets/img/shortcuts/2.png" alt="Lights">
+        <span>Lights</span>
+    </a>
+	<a href="shop.html?filter=car_batteries" class="shortcut-item" data-filter="batteries">
+        <img src="assets/img/shortcuts/3.png" alt="Pasta">
+        <span>Batteries</span>
+    </a>
+	<a href="shop.html?filter=car_seats" class="shortcut-item" data-filter="covers">
+        <img src="assets/img/shortcuts/4.png" alt="Kota">
+        <span>Seats Covers</span>
+    </a>
+	<a href="javascript:void(0)" class="shortcut-item" data-filter="breakpads">
+        <img src="assets/img/shortcuts/5.png" alt="Breakfast">
+        <span>Break Pads</span>
+    </a>
+	<a href="javascript:void(0)" class="shortcut-item" data-filter="engine">
+        <img src="assets/img/shortcuts/6.png" alt="Coffee">
+        <span>Engine</span>
+    </a>
+	<a href="javascript:void(0)" class="shortcut-item" data-filter="steering">
+        <img src="assets/img/shortcuts/7.png" alt="Meal">
+        <span>Steering</span>
+    </a>
+	<a href="javascript:void(0)" class="shortcut-item" data-filter="oil">
+        <img src="assets/img/shortcuts/8.png" alt="Seafood">
+        <span>Oil</span>
+    </a>
+	<a href="javascript:void(0)" class="shortcut-item" data-filter="mirrors">
+        <img src="assets/img/shortcuts/9.png" alt="Chicken">
+        <span>Mirrors</span>
+    </a>
+	<a href="javascript:void(0)" class="shortcut-item" data-filter="keys">
+        <img src="assets/img/shortcuts/10.png" alt="African">
+        <span>Keys</span>
+    </a>
+	<a href="javascript:void(0)" class="shortcut-item" data-filter="windscreen">
+        <img src="assets/img/shortcuts/11.png" alt="Drinks">
+        <span>Windscreen</span>
+    </a>
+	<!-- Add more shortcuts as needed -->
+        </div>
+    </div>
+
+    <section class="hero"></section>
+  <section class="content-section">
+    <div class="content-left">
+      <h1>Drive Your Dreams With Our Premium Automobiles</h1>
+    </div>
+    <div class="content-right">
+      <p>Explore a vast selection of top-quality vehicle tailored to meet you needs.
+	  Experience unparalleled service and unbeatable prices all in one place.</p>
+      <button class="shop-now-btn">Shop Now</button>
+    </div>
+  </section>
+		
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="shop.html?filter=promotions">Promotions</a></li>
+			<li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+			<li><a href="#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+    </section>
+		<section class="search-results" id="searchResults">
+    <!-- Dynamic search results will be displayed here -->
+		</section>
+
+	
+             <!-- Features Section -->
+        <section class="features">
+        <h2>Popular Repairs</h2>
+        <div class="container">
+        <div class="feature-item">
+            <h3>Engine Diagnostics</h3>
+            <img src="assets/img/engine.jpg" alt="Engine" class="feature-image">
+			<a href="tel:+27726962588" target="_blank" id="contact-link">
+			<button class="shop-now-btn">Enquire</button></a>
+        </div>
+        <div class="feature-item">
+            <h3>Wheel Alignment</h3>
+            <img src="assets/img/wheelalign.jpg" alt="Wheelalignment" class="feature-image">
+			<a href="tel:+27726962588" target="_blank" id="contact-link">
+			<button class="shop-now-btn">Enquire</button></a>
+        </div>
+		<div class="feature-item">
+            <h3>Brakes Repair</h3>
+            <img src="assets/img/brakes.jpg" alt="Brakesrepairs" class="feature-image">
+			<a href="tel:+27726962588" target="_blank" id="contact-link">
+			<button class="shop-now-btn">Enquire</button></a>
+        </div>
+        
+        </div>
+        </section>
+		
+		<!-- About-Us Section -->
+<section id="about-us" class="about-us">
+  <div class="container-about">
+    <div class="about-content">
+      <div class="about-img">
+        <img src="assets/img/about.jpg" alt="About" />
+      </div>
+      <div class="about-text">
+        <h1>Drive Innovation</h1>
+        <p>Revolutionizing the Road | Discover Our Collection of High-Performance Vehicles, Designed for the Modern Driver. From Sleek Sedans to Rugged SUVs, Our Cars Deliver Power, Precision, and Luxury. Perfect for Every Journey.</p>
+        <p>Unleash Your Passion for Driving with Every Turn of the Wheel. Whether You’re Seeking Adventure or Comfort, Our Cars Are Built to Elevate Your Driving Experience, One Mile at a Time.</p>
+        <a href="">
+          <button class="btn">Learn More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+		<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+  <div class="container-testimonials">
+    <h1>What Our Customers Say</h1>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"The SUV I bought from this company is nothing short of amazing. 
+        It handles rough terrains effortlessly while keeping the ride smooth and comfortable. 
+        I’m always confident on any road with it. Highly recommend!"</p>
+        <h4>- Sarah T., Adventure Enthusiast.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Driving my new sedan has completely changed the way I look at commutes. 
+        The comfort, tech features, and fuel efficiency are top-notch. It makes every drive a pleasure!"</p>
+        <h4>- Alex R., Urban Professional.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I couldn’t believe how quickly my new car arrived! The delivery was seamless, and the vehicle exceeded all my expectations. 
+        It’s everything I wanted and more. Fantastic service and quality!"</p>
+        <h4>- James W.</h4>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+</section>
+
+
+		<!-- Contact Section -->
+<section class="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Fill out the form below or connect with us on social media.</p>
+        
+    <form class="contact-form" id="contactForm">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Your Contact Number" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Your Address" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+        <button type="button" class="btn" onclick="sendMessage()">Send Message</button>
+    </form>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <h3>Connect with us</h3>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="assets/img/icons/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="assets/img/icons/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+			<!-- FAQ Section -->
+<!-- FAQ Section -->
+<h1>Frequently Asked Questions (FAQs)</h1>
+<div id="faqs">
+  <div class="faq-container">
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(0)">
+        <span>What is your policy on vehicle repairs?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        We offer comprehensive repair services for all makes and models. Our team of certified technicians is here to handle everything from routine maintenance to more complex repairs. Please contact us to schedule an appointment.
+      </div>
+    </div>
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(1)">
+        <span>How do I schedule a repair appointment?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        You can schedule a repair appointment by calling our service center directly or through our online booking system available on our website.
+      </div>
+    </div>
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(2)">
+        <span>Do you offer mobile repair services?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        Yes, we offer mobile repair services for specific types of repairs, such as battery replacement or flat tire assistance. Please contact our customer service team to see if mobile service is available in your area.
+      </div>
+    </div>
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(3)">
+        <span>Is there a warranty on repairs?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        Yes, all of our repairs are covered by a warranty. Most services come with a 12-month/12,000-mile warranty, which covers any defects in parts and workmanship. Contact us for warranty details specific to your service.
+      </div>
+    </div>
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(4)">
+        <span>How do I know if my car needs a repair?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        If you notice unusual sounds, vibrations, warning lights on your dashboard, or any performance issues such as decreased fuel efficiency, it's a good idea to have your vehicle inspected. Regular maintenance checks are also recommended to avoid unexpected repairs.
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeCart()">Close</button>
+        <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/slides.js"></script> 
+    <script src="assets/js/script.js"></script> 
+
+    
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<style>
+    .product { display: none; } /* Hide all products by default */
+    .product.active { display: block; } /* Show only filtered products */
+  </style>
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.htmlshop.html">Shop</a></li>
+			<li><a href="index.html#services">Services</a></li>
+			<li><a href="shop.html?filter=promotions">Promotions</a></li>
+			<li><a href="index.html#contact-us">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+			<li><a href="#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="">All Categories</option>
+			<option value="car_batteries">Batteries</option>
+            <option value="car_lights">Lights</option>
+			<option value="car_tyres">Tyres</option>
+			<option value="car_seats">Seats Covers</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </section>
+    
+        <section class="products">
+		
+	<!---PRODUCT 14--->
+    <div class="product" data-category="car_lights">
+    <img src="products/car_lights/14.jpg" alt="Product 14" class="product-image" id="productImag14">
+    <h3>VW Golf Velocity Tail Light</h3>
+    <p>(2006 – 2009)</p>
+    <p class="item-price"><strong>R509.99</strong></p>
+	<button onclick="addToCart('VW Golf Velocity (2006 – 2009) Tail Light', 509.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 1--->
+    <div class="product" data-category="car_tyres">
+    <img src="products/car_tyres/1.jpg" alt="Product 1" class="product-image" id="productImage1">
+    <h3>DUNLOP Enasave</h3>
+    <p>155/65R14 EC202 75S</p>
+    <p class="item-price"><strong>R749.99</strong></p>
+	<button onclick="addToCart('DUNLOP Enasave 155/65R14 EC202 75S', 749.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 6--->
+    <div class="product" data-category="car_batteries">
+    <img src="products/car_batteries/6.jpg" alt="Product 6" class="product-image" id="productImage6">
+    <h3>Sabat Battery</h3>
+    <p>650 Standard - 80 A/h</p>
+    <p class="item-price"><strong>R1 959.99</strong></p>
+	<button onclick="addToCart('Sabat Battery 650 Standard - 80 A/h', 1959.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 2--->
+    <div class="product" data-category="car_tyres">
+    <img src="products/car_tyres/2.jpg" alt="Product 2" class="product-image" id="productImage2">
+    <h3>Accelera Gamma</h3>
+    <p>165/55R13 70H Tyre</p>
+    <p class="item-price"><strong>R824.99</strong></p>
+	<button onclick="addToCart('Accelera Gamma 165/55R13 70H Tyre', 824.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+		
+	<!---PRODUCT 3--->
+    <div class="product" data-category="car_tyres">
+    <img src="products/car_tyres/3.jpg" alt="Product 3" class="product-image" id="productImage3">
+    <h3>Sumitomo HTR</h3>
+    <p>185/60R14 A/S P01 82H Tyre</p>
+    <p class="item-price"><strong>R839.99</strong></p>
+	<button onclick="addToCart('Sumitomo HTR 185/60R14 A/S P01 82H Tyre', 839.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 4--->
+    <div class="product" data-category="car_tyres">
+    <img src="products/car_tyres/4.jpg" alt="Product 4" class="product-image" id="productImage4">
+    <h3>RoadX RXmotion</h3>
+    <p>205/50R16 MX440 87V Tyre</p>
+    <p class="item-price"><strong>R859.99</strong></p>
+	<button onclick="addToCart('RoadX RXmotion 205/50R16 MX440 87V Tyre', 859.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 13--->
+    <div class="product" data-category="car_lights">
+    <img src="products/car_lights/13.jpg" alt="Product 13" class="product-image" id="productImag13">
+    <h3>Ford Ranger Tail Light</h3>
+    <p>2009</p>
+    <p class="item-price"><strong>R1 349.99</strong></p>
+	<button onclick="addToCart('Ford Ranger Tail Light 2009', 1349.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 7--->
+    <div class="product" data-category="car_batteries">
+    <img src="products/car_batteries/7.jpg" alt="Product 7" class="product-image" id="productImage7">
+    <h3>Willard Battery</h3>
+    <p>615B</p>
+    <p class="item-price"><strong>R1 249.99</strong></p>
+	<button onclick="addToCart('Willard Battery 615B', 1249.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 5--->
+    <div class="product" data-category="car_tyres">
+    <img src="products/car_tyres/5.jpg" alt="Product 5" class="product-image" id="productImage5">
+    <h3>Sonar SX-2</h3>
+    <p>175/60R13 77H Tyre</p>
+    <p class="item-price"><strong>R599.99</strong></p>
+	<button onclick="addToCart('Sonar SX-2 175/60R13 77H Tyre', 599.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 18--->
+    <div class="product" data-category="car_seats">
+    <img src="products/car_seats/18.jpg" alt="Product 18" class="product-image" id="productImag18">
+    <h3>Sedan Seats Cover</h3>
+    <p>Standard Suite</p>
+    <p class="item-price"><strong>R889.99</strong></p>
+	<button onclick="addToCart('Sedan Seats Cover', 889.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 8--->
+    <div class="product" data-category="car_batteries">
+    <img src="products/car_batteries/8.jpg" alt="Product 8" class="product-image" id="productImage8">
+    <h3>Exide Battery</h3>
+    <p>621</p>
+    <p class="item-price"><strong>R1 549.99</strong></p>
+	<button onclick="addToCart('Exide Battery 621', 1549.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 15--->
+    <div class="product" data-category="car_lights">
+    <img src="products/car_lights/15.jpg" alt="Product 15" class="product-image" id="productImag15">
+    <h3>Volkswagen Polo 9N/Vivo</h3>
+    <p>(2005-2018)</p>
+    <p class="item-price"><strong>R729.99</strong></p>
+	<button onclick="addToCart('Volkswagen Polo 9N/Vivo (2005-2018)', 729.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 9--->
+    <div class="product" data-category="car_batteries">
+    <img src="products/car_batteries/9.jpg" alt="Product 9" class="product-image" id="productImag9">
+    <h3>Varta Agm</h3>
+    <p>658 G14 - 674249</p>
+    <p class="item-price"><strong>R5 549.99</strong></p>
+	<button onclick="addToCart('Varta Agm 658 G14 - 674249', 5549.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 10--->
+    <div class="product" data-category="car_batteries">
+    <img src="products/car_batteries/10.jpg" alt="Product 10" class="product-image" id="productImag10">
+    <h3>Sabat Battery</h3>
+    <p>647</p>
+    <p class="item-price"><strong>R2 749.99</strong></p>
+	<button onclick="addToCart('Sabat Battery 647', 2749.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 11--->
+    <div class="product" data-category="car_lights">
+    <img src="products/car_lights/11.jpg" alt="Product 11" class="product-image" id="productImag11">
+    <h3>Mercedes C Class Headlight</h3>
+    <p>W204 (2007 – 2010)</p>
+    <p class="item-price"><strong>R3 809.99</strong></p>
+	<button onclick="addToCart('Mercedes C Class Headlight W204 (2007 – 2010)', 3809.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 20--->
+    <div class="product" data-category="car_seats">
+    <img src="products/car_seats/20.jpg" alt="Product 20" class="product-image" id="productImag20">
+    <h3>Luxury Seats Cover</h3>
+    <p>Premuim SUV Suite</p>
+    <p class="item-price"><strong>R1 264.99</strong></p>
+	<button onclick="addToCart('Luxury Seats Cover', 1264.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 12--->
+    <div class="product" data-category="car_lights">
+    <img src="products/car_lights/12.jpg" alt="Product 12" class="product-image" id="productImag12">
+    <h3>Ford Bantam Rocam Headlight</h3>
+    <p>(2009 – 2012)</p>
+    <p class="item-price"><strong>R1 164.99</strong></p>
+	<button onclick="addToCart('Ford Bantam Rocam Headlight (2009 – 2012)', 1164.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 16--->
+    <div class="product" data-category="car_seats">
+    <img src="products/car_seats/16.jpg" alt="Product 16" class="product-image" id="productImag16">
+    <h3>RedX Black Seats Cover</h3>
+    <p>Premuim SUV Suite</p>
+    <p class="item-price"><strong>R1 264.99</strong></p>
+	<button onclick="addToCart('RedX Black Seats Cover', 1264.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 17--->
+    <div class="product" data-category="car_seats">
+    <img src="products/car_seats/17.jpg" alt="Product 17" class="product-image" id="productImag17">
+    <h3>Sky Planet Seats Cover</h3>
+    <p>Premuim SUV Suite</p>
+    <p class="item-price"><strong>R1 999.99</strong></p>
+	<button onclick="addToCart('Sky Planet Seats Cover', 1999.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+	<!---PRODUCT 19--->
+    <div class="product" data-category="car_seats">
+    <img src="products/car_seats/19.jpg" alt="Product 19" class="product-image" id="productImag19">
+    <h3>Premier Red Seats Cover</h3>
+    <p>Premuim Seat Suite</p>
+    <p class="item-price"><strong>R999.99</strong></p>
+	<button onclick="addToCart('Premier Red Seats Cover', 999.99)" 
+	class="add-to-cart-button">Add To Cart</button>
+	</div>
+	
+</section>
+
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeCart()">Close</button>
+        <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+
+    <script src="assets/js/script.js"></script> 
+    
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+	
+	 <script>
+    // Function to filter products dynamically
+    function filterProducts() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const categoryFilter = document.getElementById('categoryFilter').value;
+      const products = document.querySelectorAll('.product');
+
+      products.forEach(product => {
+        const productName = product.querySelector('p').textContent.toLowerCase();
+        const productCategory = product.dataset.category;
+
+        const matchesSearch = productName.includes(searchInput);
+        const matchesCategory = !categoryFilter || productCategory === categoryFilter;
+
+        if (matchesSearch && matchesCategory) {
+          product.classList.add('active');
+        } else {
+          product.classList.remove('active');
+        }
+      });
+    }
+
+    // Automatically filter based on URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get('filter');
+
+    // If there is a filter in the URL, apply it
+    if (filter) {
+      document.getElementById('categoryFilter').value = filter; // Pre-select the category filter
+      filterProducts(); // Apply the filter immediately
+    } else {
+      // If no filter, show all products
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        product.classList.add('active');
+      });
+    }
+
+    // Event listener for changes to filter or search input
+    document.getElementById('categoryFilter').addEventListener('change', filterProducts);
+    document.getElementById('searchInput').addEventListener('input', filterProducts);
+</script>
+
+</body>
+</html>
